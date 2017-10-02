@@ -41,7 +41,8 @@
         <activity android:name=".ToDoActivity" />
         <activity android:name=".MobileActivity" />
         <activity android:name=".SupermarketActivity" />
-        <activity android:name=".TransportActivity"></activity>
+        <activity android:name=".TransportActivity" />
+        <activity android:name=".ShakeActivity"></activity>
     </application>
 
 </manifest>

@@ -45,13 +45,12 @@ public class ArrivedMenuActivity extends Activity {
                     toSupermarket(view);
                 } else if(category_name.equals("Transport")){
                     toTransport(view);
+                } else if(category_name.equals("What's for dinner?")){
+                    toShake(view);
                 }
                 else{
                     Toast.makeText(ArrivedMenuActivity.this, category.getName(), Toast.LENGTH_SHORT).show();
                 }
-
-
-
             }
         });
 
@@ -72,10 +71,15 @@ public class ArrivedMenuActivity extends Activity {
         startActivity(intent_trsnsport);
     }
 
+    public void toShake (View view){
+        Intent intent_shake = new Intent(ArrivedMenuActivity.this, ShakeActivity.class);
+        startActivity(intent_shake);
+    }
+
     private void initializeMenu(){
 
        String[] categories = {"Mobile Communication",  "Supermarkets","Transport", "Banks",
-               "Accommodation", "Shopping", "Medicine", "Beauty", "Touristic Attractions"};
+               "Accommodation", "Shopping", "Medicine", "Beauty", "Touristic Attractions","What's for dinner?"};
 
        for (String c:categories){
            Category category = new Category(c);
