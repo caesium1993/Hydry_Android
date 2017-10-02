@@ -67,8 +67,8 @@ public class ArrivedMenuActivity extends Activity {
     }
 
     public void toTransport (View view){
-        Intent intent_trsnsport = new Intent(ArrivedMenuActivity.this, TransportActivity.class);
-        startActivity(intent_trsnsport);
+        Intent intent_transport = new Intent(ArrivedMenuActivity.this, TransportActivity.class);
+        startActivity(intent_transport);
     }
 
     public void toShake (View view){
