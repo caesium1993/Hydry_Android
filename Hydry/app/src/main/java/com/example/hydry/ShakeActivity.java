@@ -16,7 +16,7 @@ public class ShakeActivity extends Activity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_car_rental);
+        setContentView(R.layout.activity_shake);
         SensorManager manager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 //        List<Sensor> list = manager.getSensorList(Sensor.TYPE_ALL);//获取传感器列表
 //        for(int i=0;i<list.size();i++){

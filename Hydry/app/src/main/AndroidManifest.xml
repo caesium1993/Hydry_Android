@@ -43,8 +43,6 @@
         <activity android:name=".SupermarketActivity" />
         <activity android:name=".TransportActivity" />
         <activity android:name=".ShakeActivity" />
-        <activity android:name=".CarRentalActivity" />
-        <activity android:name=".PublicTransportationActivity"></activity>
     </application>
 
 </manifest>
