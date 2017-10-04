@@ -36,7 +36,7 @@
         <activity android:name=".MainMenuActivity" />
         <activity android:name=".PlanToGoActivity" />
         <activity android:name=".TravelPlanActivity" />
-        <activity android:name=".VisaActivity" />Main
+        <activity android:name=".VisaActivity" />
         <activity android:name=".ArrivedMenuActivity" />
         <activity android:name=".ToDoActivity" />
         <activity android:name=".MobileActivity" />
@@ -46,7 +46,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SupermarketActivity" />
-        <activity android:name=".WorthActivity"></activity>
+        <activity android:name=".WorthActivity"/>
     </application>
 
 </manifest>
