@@ -7,12 +7,14 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.net.Uri;
 import android.os.Bundle;
+
+import java.util.Random;
 
 public class ShakeActivity extends Activity implements SensorEventListener {
 
     private long time = 0;
+    private static int restaurant = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +35,17 @@ public class ShakeActivity extends Activity implements SensorEventListener {
         int x = (int) Math.abs(values[0]);
         int y = (int) Math.abs(values[1]);
         int z = (int) Math.abs(values[2]);
-        if(x>6&&y>6&&z>6){//当绝对值>6并且两次摇的时间间隔>1秒的时候，才认为是摇动了一次，可以自定义值大小
-            if(System.currentTimeMillis()-time>1000){
-                //摇了以后要做的事情
-                //!!!
-                toAfterShake();
+        if(x > 5 && y > 5 && z > 5){
+            if(System.currentTimeMillis() - time > 2000){
+                //摇了以后要做的事
+                switch(restaurant % 4 + 1){
+                    case 1:toAfterShake1();break;
+                    case 2:toAfterShake2();break;
+                    case 3:toAfterShake3();break;
+                    case 4:toAfterShake4();break;
+                    default:break;
+                }
+                restaurant++;
                 time = System.currentTimeMillis();
             }
         }
@@ -47,8 +55,23 @@ public class ShakeActivity extends Activity implements SensorEventListener {
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
-    public void toAfterShake(){
-        Intent intent_after_shake = new Intent(ShakeActivity.this, AfterShakeActivity.class);
+    public void toAfterShake1(){
+        Intent intent_after_shake = new Intent(ShakeActivity.this, AfterShake_1Activity.class);
+        startActivity(intent_after_shake);
+    }
+
+    public void toAfterShake2(){
+        Intent intent_after_shake = new Intent(ShakeActivity.this, AfterShake_2Activity.class);
+        startActivity(intent_after_shake);
+    }
+
+    public void toAfterShake3(){
+        Intent intent_after_shake = new Intent(ShakeActivity.this, AfterShake_3Activity.class);
+        startActivity(intent_after_shake);
+    }
+
+    public void toAfterShake4(){
+        Intent intent_after_shake = new Intent(ShakeActivity.this, AfterShake_4Activity.class);
         startActivity(intent_after_shake);
     }
 }
