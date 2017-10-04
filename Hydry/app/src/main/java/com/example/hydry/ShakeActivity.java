@@ -33,11 +33,11 @@ public class ShakeActivity extends Activity implements SensorEventListener {
         int x = (int) Math.abs(values[0]);
         int y = (int) Math.abs(values[1]);
         int z = (int) Math.abs(values[2]);
-        if(x>10&&y>10&&z>10){//当绝对值>10并且两次摇的时间间隔>1秒的时候，才认为是摇动了一次，可以自定义值大小
+        if(x>6&&y>6&&z>6){//当绝对值>6并且两次摇的时间间隔>1秒的时候，才认为是摇动了一次，可以自定义值大小
             if(System.currentTimeMillis()-time>1000){
                 //摇了以后要做的事情
                 //!!!
-                test();
+                toAfterShake();
                 time = System.currentTimeMillis();
             }
         }
@@ -47,10 +47,9 @@ public class ShakeActivity extends Activity implements SensorEventListener {
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
-    public void test(){
-        Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.hertz&hl=en-us");
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(intent);
+    public void toAfterShake(){
+        Intent intent_after_shake = new Intent(ShakeActivity.this, AfterShakeActivity.class);
+        startActivity(intent_after_shake);
     }
 }
 
