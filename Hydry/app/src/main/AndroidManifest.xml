@@ -25,7 +25,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,13 +36,17 @@
         <activity android:name=".MainMenuActivity" />
         <activity android:name=".PlanToGoActivity" />
         <activity android:name=".TravelPlanActivity" />
-        <activity android:name=".VisaActivity" />
+        <activity android:name=".VisaActivity" />Main
         <activity android:name=".ArrivedMenuActivity" />
         <activity android:name=".ToDoActivity" />
         <activity android:name=".MobileActivity" />
-        <activity android:name=".SupermarketActivity" />
+        <activity android:name=".ColesActivity" />
         <activity android:name=".TransportActivity" />
         <activity android:name=".ShakeActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SupermarketActivity" />
+        <activity android:name=".WorthActivity"></activity>
     </application>
 
 </manifest>
