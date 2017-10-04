@@ -2,6 +2,7 @@ package com.example.hydry;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,9 @@ public class MainMenuActivity extends Activity {
     }
 
     public void toArrived (View view) {
+        LocationDetermination mLocation = new LocationDetermination(MainMenuActivity.this);
+        mLocation.checkGPSSetting();
+        mLocation.getLocation();
         Intent intent_arrived = new Intent(MainMenuActivity.this,ArrivedMenuActivity.class);
         startActivity(intent_arrived);
     }

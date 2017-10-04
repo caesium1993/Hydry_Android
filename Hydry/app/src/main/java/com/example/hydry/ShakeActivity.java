@@ -33,10 +33,11 @@ public class ShakeActivity extends Activity implements SensorEventListener {
         int x = (int) Math.abs(values[0]);
         int y = (int) Math.abs(values[1]);
         int z = (int) Math.abs(values[2]);
-        if(x>10&&y>10&&z>10){//当绝对值>10并且两次摇的时间间隔>3秒的时候，才认为是摇动了一次，可以自定义值大小
-            if(System.currentTimeMillis()-time>3000){
+        if(x>10&&y>10&&z>10){//当绝对值>10并且两次摇的时间间隔>1秒的时候，才认为是摇动了一次，可以自定义值大小
+            if(System.currentTimeMillis()-time>1000){
                 //摇了以后要做的事情
-                //test();
+                //!!!
+                test();
                 time = System.currentTimeMillis();
             }
         }
