@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hydry.AfterShake_3Activity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="The Hardware Societe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/restaurantDescription3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="118-120, Hardware Street, CBD, Melbourne, VIC"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/restaurant3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fiendishly creative egg fabrications."
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDescription3" />
+
+    <ImageView
+        android:id="@+id/hardware1"
+        android:layout_width="171dp"
+        android:layout_height="104dp"
+        android:src="@drawable/hardware1"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant3" />
+
+    <ImageView
+        android:id="@+id/hardware2"
+        android:layout_width="162dp"
+        android:layout_height="104dp"
+        android:src="@drawable/hardware2"
+        android:layout_marginLeft="198dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant3" />
+
+    <ImageView
+        android:id="@+id/hardware3"
+        android:layout_width="172dp"
+        android:layout_height="148dp"
+        android:src="@drawable/hardware3"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="61dp"
+        app:layout_constraintTop_toBottomOf="@+id/hardware1" />
+
+    <ImageView
+        android:id="@+id/hardware4"
+        android:layout_width="170dp"
+        android:layout_height="142dp"
+        android:src="@drawable/hardware4"
+        android:layout_marginLeft="198dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="61dp"
+        app:layout_constraintTop_toBottomOf="@+id/hardware1" />
+</android.support.constraint.ConstraintLayout>

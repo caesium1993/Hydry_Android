@@ -49,7 +49,11 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SupermarketActivity" />
-        <activity android:name=".WorthActivity"/>
+        <activity android:name=".WorthActivity" />
+        <activity android:name=".AfterShake_1Activity" />
+        <activity android:name=".AfterShake_2Activity" />
+        <activity android:name=".AfterShake_3Activity" />
+        <activity android:name=".AfterShake_4Activity" />
     </application>
 
 </manifest>
