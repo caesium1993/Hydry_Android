@@ -80,7 +80,7 @@ public class ColesActivity extends ListActivity {
                                 Map<String,Object> items = new HashMap<String,Object>();
                                 items.put("image", imageids[j]);
                                 items.put("title", itemsnames[j]);
-                                items.put("text",itemsdescription[j]+"\n"+itemprefered[j]);
+                                items.put("text",itemsdescription[j]+"\n"+"Prefered: "+itemprefered[j]);
                                 mData.add(items);
                             }
                             SimpleAdapter adapter = new SimpleAdapter(ColesActivity.this,mData,R.layout.activity_coles,
