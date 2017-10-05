@@ -10,6 +10,16 @@ public class Items {
     private String id;
     private String company;
     private String prefered;
+    private int itemimage;
+
+    public Items(String itemname, String itemdescription, String prefered, int itemimage) {
+        this.itemname = itemname;
+        this.itemdescription = itemdescription;
+        this.prefered = prefered;
+        this.itemimage = itemimage;
+    }
+
+    public void setItemimage(int itemimage){this.itemimage=itemimage;}
     public void setItemname(String itemname){
         this.itemname=itemname;
     }
@@ -32,4 +42,5 @@ public class Items {
     }
     public String getCompany() {return this.company;}
     public String getPrefered(){return this.prefered;}
+    public int getItemimage(){return this.itemimage;}
 }
