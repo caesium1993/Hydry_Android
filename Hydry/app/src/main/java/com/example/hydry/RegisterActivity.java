@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.hydry.AzureServicesAdapter;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.http.OkHttpClientFactory;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
@@ -20,7 +19,6 @@ import com.microsoft.windowsazure.mobileservices.table.sync.localstore.SQLiteLoc
 import com.microsoft.windowsazure.mobileservices.table.sync.synchandler.SimpleSyncHandler;
 import com.squareup.okhttp.OkHttpClient;
 
-import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -36,31 +34,21 @@ public class RegisterActivity extends Activity {
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
-        try {
-            AzureServicesAdapter.Initialize(this);
-            AzureServicesAdapter azureServicesAdapter=AzureServicesAdapter.getInstance();
-            mClient=azureServicesAdapter.getClient();
+        //AzureServicesAdapter.Initialize(this);
+        //AzureServicesAdapter azureServicesAdapter=AzureServicesAdapter.getInstance();
+        mClient=MainActivity.azureServicesAdapter.getClient();
 
-            mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
-                @Override
-                public OkHttpClient createOkHttpClient() {
-                    OkHttpClient client = new OkHttpClient();
-                    client.setReadTimeout(20, TimeUnit.SECONDS);
-                    client.setWriteTimeout(20, TimeUnit.SECONDS);
-                    return client;
-                }
-            });
-            mUsertable=mClient.getTable(Users.class);
-            //initLocalStore().get();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } /*catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (MobileServiceLocalStoreException e) {
-            e.printStackTrace();
-        }*/
+        mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
+            @Override
+            public OkHttpClient createOkHttpClient() {
+                OkHttpClient client = new OkHttpClient();
+                client.setReadTimeout(20, TimeUnit.SECONDS);
+                client.setWriteTimeout(20, TimeUnit.SECONDS);
+                return client;
+            }
+        });
+        mUsertable=mClient.getTable(Users.class);
+        //initLocalStore().get();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
