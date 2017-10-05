@@ -42,7 +42,8 @@
         <activity android:name=".VisaActivity" />
         <activity android:name=".ArrivedMenuActivity" />
         <activity android:name=".ToDoActivity" />
-        <activity android:name=".MobileActivity" />
+        <activity android:name=".MobileActivity">
+        </activity>
         <activity android:name=".ColesActivity" />
         <activity android:name=".TransportActivity" />
         <activity android:name=".ShakeActivity" />

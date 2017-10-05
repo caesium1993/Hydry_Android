@@ -10,6 +10,12 @@ public class Telecommunication {
     private String prepaid;
     private String postpaid;
 
+    public Telecommunication(String name, String prepaid, String postpaid) {
+        this.name = name;
+        this.prepaid = prepaid;
+        this.postpaid = postpaid;
+    }
+
     public String getId() {
         return id;
     }
