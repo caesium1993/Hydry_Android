@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 import android.widget.ListView;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
@@ -38,6 +39,7 @@ public class ColesActivity extends Activity {
         }
         super.onCreate(savedInstanceState);
         //super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_coles);
         Getresultfromazure();
     }

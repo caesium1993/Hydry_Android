@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+<<<<<<< HEAD
+import android.view.Window;
+=======
 import android.widget.ListView;
 
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
@@ -13,6 +16,7 @@ import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+>>>>>>> d64c3567f9f0955072ff641ac95b92d3c9723631
 
 public class WorthActivity extends Activity {
     private MobileServiceClient mClient;
@@ -33,6 +37,7 @@ public class WorthActivity extends Activity {
             e.printStackTrace();
         }
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_worth);
         Getresultfromazure();
     }

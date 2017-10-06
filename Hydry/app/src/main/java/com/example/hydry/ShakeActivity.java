@@ -8,6 +8,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.Window;
 
 import java.util.Random;
 
@@ -18,6 +19,7 @@ public class ShakeActivity extends Activity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_shake);
         SensorManager manager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 //        List<Sensor> list = manager.getSensorList(Sensor.TYPE_ALL);//获取传感器列表
