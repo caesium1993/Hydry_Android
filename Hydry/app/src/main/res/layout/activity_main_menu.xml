@@ -16,8 +16,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="60px"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="96dp"
-        android:layout_marginLeft="88dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginLeft="79dp"
         android:backgroundTint="#000000"
         app:layout_constraintLeft_toLeftOf="parent">
     </Button>
@@ -28,7 +28,7 @@
         android:layout_height="62dp"
         android:text="Arrived"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="88dp"
+        android:layout_marginLeft="79dp"
         android:onClick="toArrived"
         android:textSize="60px"
         android:textColor="#FFFFF0"

@@ -10,70 +10,70 @@
         android:id="@+id/restaurant2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
         android:text="The Meat &amp; Wine Co"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/restaurantAddress2"
-        android:layout_width="236dp"
-        android:layout_height="47dp"
+        android:layout_width="235dp"
+        android:layout_height="39dp"
         android:text="Freshwater Place, 3 Freshwater Place, Southbank, Melbourne"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/restaurant2"
-        tools:layout_editor_absoluteX="151dp" />
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant2" />
 
     <TextView
         android:id="@+id/restaurantDescription2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rustic steaks within a sleek and modern ambience."
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintTop_toBottomOf="@+id/restaurantAddress2" />
 
     <ImageView
         android:id="@+id/meatwineco1"
-        android:layout_width="161dp"
-        android:layout_height="124dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="164dp"
+        android:layout_height="116dp"
         android:src="@drawable/meatwineco1"
-        android:layout_marginTop="85dp"
-        app:layout_constraintTop_toBottomOf="@+id/meatwineco4" />
+        android:layout_marginTop="62dp"
+        app:layout_constraintTop_toBottomOf="@+id/meatwineco2"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/meatwineco2" />
 
     <ImageView
         android:id="@+id/meatwineco3"
-        android:layout_width="160dp"
-        android:layout_height="86dp"
+        android:layout_width="158dp"
+        android:layout_height="96dp"
         android:src="@drawable/meatwineco2"
-        android:layout_marginLeft="208dp"
+        android:layout_marginLeft="196dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="85dp"
-        app:layout_constraintTop_toBottomOf="@+id/meatwineco4" />
+        android:layout_marginTop="22dp"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDescription2" />
 
     <ImageView
         android:id="@+id/meatwineco4"
-        android:layout_width="194dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="159dp"
+        android:layout_height="131dp"
         android:src="@drawable/meatwineco3"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantDescription2" />
+        android:layout_marginTop="67dp"
+        app:layout_constraintTop_toBottomOf="@+id/meatwineco3"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/meatwineco3"
+        tools:layout_editor_absoluteY="372dp" />
 
     <ImageView
         android:id="@+id/meatwineco2"
-        android:layout_width="146dp"
-        android:layout_height="94dp"
+        android:layout_width="170dp"
+        android:layout_height="108dp"
         android:src="@drawable/meatwineco4"
-        android:layout_marginLeft="222dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="7dp"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantDescription2" />
+        android:layout_marginTop="107dp"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantDescription2"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 </android.support.constraint.ConstraintLayout>
