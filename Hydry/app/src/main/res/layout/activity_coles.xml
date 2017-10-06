@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
     tools:context="com.example.hydry.ColesActivity">
-    
+
     <TextView
         android:id="@+id/text_coles"
         android:layout_width="fill_parent"

@@ -43,7 +43,7 @@ public class ArrivedMenuActivity extends Activity {
 
                 if (category_name.equals("Mobile Communication")){
                     toMobile(view);
-                } else if(category_name.equals("Supermarkets")){
+                } else if(category_name.equals("Supermarket")){
                     toSupermarket(view);
                 } else if(category_name.equals("Transport")){
                     toTransport(view);
