@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 //import android.widget.BaseAdapter;
 
@@ -29,7 +30,9 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Category category = getItem(position);
         View view = LayoutInflater.from(getContext()).inflate(resourceId,null);
+        ImageView categoryIcon = (ImageView) view.findViewById(R.id.image_menu_item);
         TextView categoryName = (TextView) view.findViewById(R.id.text_menu_item);//???
+        categoryIcon.setImageResource(category.getImageId());
         categoryName.setText(category.getName());
         return view;
     }

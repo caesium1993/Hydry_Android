@@ -80,11 +80,16 @@ public class ArrivedMenuActivity extends Activity {
 
     private void initializeMenu(){
 
-        String[] categories = {"Mobile Communication",  "Supermarkets","Transport", "Banks",
-                "Accommodation", "Shopping", "Medicine", "Beauty", "Touristic Attractions","What's for dinner?"};
+        String[] categories = {"Mobile Communication",  "Supermarket","Transport", "Bank",
+                "Accommodation", "Shopping", "Medicine", "Beauty", "Touristic Attraction",
+                "What's for dinner?"};
+        int[] cImages = {R.drawable.mobile_communication, R.drawable.supermarket,
+        R.drawable.transport, R.drawable.bank, R.drawable.accomodation, R.drawable.shopping,
+        R.drawable.medicine,R.drawable.beauty, R.drawable.touristic_attraction,
+        R.drawable.whats_for_dinner};
 
-        for (String c:categories){
-            Category category = new Category(c);
+        for (int i=0;i<categories.length;i++){
+            Category category = new Category(categories[i],cImages[i]);
             menu.add(category);
             Log.d("ArrivedMenuActivity",category.toString());
         }

@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
     tools:context="com.example.hydry.ColesActivity">
+
+
+
     <ListView
         android:id="@+id/colesitemlist"
         android:layout_width="fill_parent"

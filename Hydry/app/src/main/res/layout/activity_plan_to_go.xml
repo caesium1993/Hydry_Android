@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
+
         android:inputType="textPersonName"
-        android:text="Destination"
+        android:text="Where is your destination?"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
@@ -25,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintVertical_bias="0.0" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearLayout"
         android:layout_width="369dp"
         android:layout_height="396dp"
@@ -48,11 +49,16 @@
 
         <Button
             android:id="@+id/button_confirm_country"
-            android:layout_width="113dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:onClick="toTravelPlan"
-            android:text="Confirm" />
-    </LinearLayout>
+            android:gravity="center_horizontal"
+            android:text="Confirm"
+            android:layout_marginTop="61dp"
+            android:layout_below="@+id/spinner_countries"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="50dp" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
