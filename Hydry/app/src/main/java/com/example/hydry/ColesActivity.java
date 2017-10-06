@@ -25,7 +25,7 @@ public class ColesActivity extends Activity {
     private String[] itemprefered;
     private ArrayList<Items> mitemlist = new ArrayList<Items>();
     private int[] imageids = { R.drawable.coles_gippsland, R.drawable.coles_kangrooburger,
-            R.drawable.coles_croissant, R.drawable.coles_honeyham };
+            R.drawable.coles_croissant, R.drawable.coles_honeyham,R.drawable.coles_englishbreakfast };
     //ListView mListView = null;
     ArrayList<Map<String,Object>> mData= new ArrayList<Map<String,Object>>();;
 
