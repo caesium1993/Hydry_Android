@@ -5,5 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hydry.WorthActivity">
+    <ListView
+        android:id="@+id/worthitemlist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:listitem="@layout/colesitem"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="233dp"
+        android:layout_marginLeft="0dp" />
 
 </android.support.constraint.ConstraintLayout>
