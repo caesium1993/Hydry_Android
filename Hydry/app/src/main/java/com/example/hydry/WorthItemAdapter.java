@@ -11,14 +11,12 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by lenovo on 2017/10/5.
+ * Created by lenovo on 2017/10/6.
  */
 
-public class ItemAdapter extends ArrayAdapter<Items> {
+public class WorthItemAdapter extends ArrayAdapter<Items> {
     private int resourceId;
-    //private int[] imageids = { R.drawable.coles_kangrooburger, R.drawable.coles_croissant,
-            //R.drawable.coles_gippsland, R.drawable.coles_honeyham };
-    public ItemAdapter(Context context, int textViewResourceId, List<Items> obj){
+    public WorthItemAdapter(Context context, int textViewResourceId, List<Items> obj){
         super (context, textViewResourceId,obj);
         resourceId = textViewResourceId;
     }
@@ -26,9 +24,9 @@ public class ItemAdapter extends ArrayAdapter<Items> {
     public View getView (int position, View convertView, ViewGroup parent){
         View view = LayoutInflater.from(getContext()).inflate(resourceId,null);
         Items item = getItem(position);
-        TextView itemname = (TextView) view.findViewById(R.id.itemtitle);//???
-        TextView itemdescription = (TextView) view.findViewById(R.id.itemdescription);
-        ImageView itemimage = (ImageView) view.findViewById(R.id.itemimage);
+        TextView itemname = (TextView) view.findViewById(R.id.worthitemtitle);//???
+        TextView itemdescription = (TextView) view.findViewById(R.id.worthitemdescription);
+        ImageView itemimage = (ImageView) view.findViewById(R.id.worthitemimage);
         itemname.setText(item.getItemname());
         itemdescription.setText(item.getItemdescription()+"\nPrefered: "+item.getPrefered());
         itemimage.setImageResource(item.getItemimage());
