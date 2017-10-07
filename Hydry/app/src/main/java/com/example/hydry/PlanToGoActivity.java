@@ -51,7 +51,7 @@ public class PlanToGoActivity extends Activity {
         mSpinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(PlanToGoActivity.this, countries.get(position), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PlanToGoActivity.this, countries.get(position), Toast.LENGTH_SHORT).show();
             }
 
             @Override

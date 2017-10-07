@@ -86,7 +86,8 @@ public class LocationDetermination {
             addresses = geocoder.getFromLocation(location.getLatitude(),location.getLongitude(),1);
         } catch (IOException e) {
             e.printStackTrace();
-        } if (addresses.size()>0){
+        }
+        if (addresses.size()>0){
             String message = "Welcome to "+addresses.get(0).getCountryName();
             Toast.makeText(activity,message,Toast.LENGTH_LONG).show();
         }
