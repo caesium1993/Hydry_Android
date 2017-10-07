@@ -15,6 +15,7 @@
         android:layout_alignParentRight="true" android:layout_alignParentTop="true"
         android:layout_alignWithParentIfMissing="true" android:gravity="center_vertical"
         android:padding="5dip"
+        android:textStyle="bold"
         android:textSize="18dip" />
     <TextView android:id="@+id/itemdescription"
         android:layout_width="fill_parent" android:layout_height="wrap_content"
