@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#9F696969"
     tools:context="com.example.hydry.ShakeActivity">
 
     <TextView
         android:id="@+id/shakeDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFF5EE"
         android:text="Shake your phone to get recommendations！"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"

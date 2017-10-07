@@ -20,6 +20,7 @@
         <TextView android:id="@+id/worthitemdescription"
             android:layout_width="fill_parent" android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/worthitemimage"
+            android:textColor="#FFF5EE"
             android:layout_below="@+id/worthitemtitle"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"

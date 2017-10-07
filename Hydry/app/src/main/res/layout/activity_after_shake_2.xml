@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AFD2691E"
     tools:context="com.example.hydry.AfterShake_2Activity">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginTop="15dp"
         android:text="The Meat &amp; Wine Co"
         android:typeface="serif"
+        android:textColor="#600000"
         android:textSize="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,6 +24,7 @@
         android:id="@+id/restaurantAddress2"
         android:layout_width="332dp"
         android:layout_height="55dp"
+        android:textColor="#FFF5EE"
         android:text="Freshwater Place, 3 Freshwater Place, Southbank, Melbourne"
         android:layout_marginLeft="16dp"
         android:textSize="20dp"
@@ -33,6 +36,7 @@
         android:id="@+id/restaurantDescription2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFF5EE"
         android:text="Rustic steaks within a sleek and modern ambience."
         android:layout_marginLeft="15dp"
         android:textSize="20dp"

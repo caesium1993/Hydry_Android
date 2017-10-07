@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#AFD2691E"
     tools:context="com.example.hydry.VisaActivity">
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_width="300dp"
         android:layout_height="42dp"
         android:textSize="15dp"
+        android:textColor="#FFF5EE"
         android:text="All the detailed processes can be found here:"
         android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@+id/visaDescription5"
@@ -22,6 +24,7 @@
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
+        android:textColor="#FFF5EE"
         android:text="Apply for your visitor visa at least ONE month before departure!"
         android:layout_marginLeft="16dp"
         android:textSize="20dp"
@@ -44,6 +47,7 @@
         android:id="@+id/visaDescription3"
         android:layout_width="302dp"
         android:layout_height="128dp"
+        android:textColor="#FFF5EE"
         android:textSize="15dp"
         android:text="If you travel with a travel agency, your visa application should be processed by the agency.\n\nOtherwise, you can either make an online application or a face-to-face application  at an authorised local office."
         android:layout_marginTop="24dp"
@@ -56,6 +60,7 @@
         android:layout_width="299dp"
         android:layout_height="90dp"
         android:textSize="15dp"
+        android:textColor="#FFF5EE"
         android:text="Basic documents you need for the visa:\nPassport, identity certification, passport photos, bank account statement(recent), income certification(unnecessary for students)."
         android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@+id/visaDescription3"
@@ -66,6 +71,7 @@
         android:id="@+id/visaDescription5"
         android:layout_width="300dp"
         android:layout_height="27dp"
+        android:textColor="#FFF5EE"
         android:text="Application fee(about 150AUD) needed."
         android:layout_marginTop="15dp"
         android:textSize="15dp"
