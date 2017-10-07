@@ -84,7 +84,7 @@ public class ArrivedMenuActivity extends Activity {
                 "Accommodation", "Shopping", "Medicine", "Beauty", "Touristic Attraction",
                 "What's for dinner?"};
         int[] cImages = {R.drawable.mobile_communication, R.drawable.supermarket,
-        R.drawable.transport, R.drawable.bank, R.drawable.accomodation, R.drawable.shopping,
+        R.drawable.transport, R.drawable.bank, R.drawable.accommodation, R.drawable.shopping,
         R.drawable.medicine,R.drawable.beauty, R.drawable.touristic_attraction,
         R.drawable.whats_for_dinner};
 
