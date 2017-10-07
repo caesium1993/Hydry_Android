@@ -10,7 +10,6 @@ import android.location.Criteria;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
-import android.media.audiofx.BassBoost;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.widget.Toast;
@@ -53,7 +52,7 @@ public class LocationDetermination {
     /*
      * to obtain the located city
      */
-    public void getLocation() {
+    public String getLocation() {
         LocationManager locationManager = (LocationManager) activity.getSystemService(Context.
                 LOCATION_SERVICE);
         Criteria criteria = new Criteria();
@@ -76,7 +75,7 @@ public class LocationDetermination {
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
-            return;
+            return null;
         }
         Location location = locationManager.getLastKnownLocation(provider);
 
@@ -91,7 +90,7 @@ public class LocationDetermination {
             String message = "Welcome to "+addresses.get(0).getCountryName();
             Toast.makeText(activity,message,Toast.LENGTH_LONG).show();
         }
-
+        return addresses.get(0).getCountryName();
 
     }
 }

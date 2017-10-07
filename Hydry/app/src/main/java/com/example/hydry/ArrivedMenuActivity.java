@@ -3,7 +3,6 @@ package com.example.hydry;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.*;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -17,12 +16,15 @@ import java.util.ArrayList;
 public class ArrivedMenuActivity extends Activity {
 
     private ArrayList<Category> menu = new ArrayList<Category>();
+    private String Location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_arrived_menu);
+        Bundle bundle=this.getIntent().getExtras();
+        Location=bundle.getString("Location");
 
         /*
         main menu for the arrived travellers
@@ -59,23 +61,31 @@ public class ArrivedMenuActivity extends Activity {
     }
 
     public void toMobile (View view){
-        Intent intent_mobile = new Intent(ArrivedMenuActivity.this, MobileActivity.class);
-        startActivity(intent_mobile);
+        if(Location.equals("Australia")) {
+            Intent intent_mobile = new Intent(ArrivedMenuActivity.this, MobileActivity.class);
+            startActivity(intent_mobile);
+        }
     }
 
     public void toSupermarket (View view){
-        Intent intent_supermarket = new Intent(ArrivedMenuActivity.this, SupermarketActivity.class);
-        startActivity(intent_supermarket);
+        if (Location.equals("Australia")) {
+            Intent intent_supermarket = new Intent(ArrivedMenuActivity.this, SupermarketActivity.class);
+            startActivity(intent_supermarket);
+        }
     }
 
     public void toTransport (View view){
-        Intent intent_transport = new Intent(ArrivedMenuActivity.this, TransportActivity.class);
-        startActivity(intent_transport);
+        if (Location.equals("Australia")){
+            Intent intent_transport = new Intent(ArrivedMenuActivity.this, TransportActivity.class);
+            startActivity(intent_transport);
+        }
     }
 
     public void toShake (View view){
-        Intent intent_shake = new Intent(ArrivedMenuActivity.this, ShakeActivity.class);
-        startActivity(intent_shake);
+        if (Location.equals("Australia")) {
+            Intent intent_shake = new Intent(ArrivedMenuActivity.this, ShakeActivity.class);
+            startActivity(intent_shake);
+        }
     }
 
     private void initializeMenu(){
@@ -91,7 +101,7 @@ public class ArrivedMenuActivity extends Activity {
         for (int i=0;i<categories.length;i++){
             Category category = new Category(categories[i],cImages[i]);
             menu.add(category);
-            Log.d("ArrivedMenuActivity",category.toString());
+            //Log.d("ArrivedMenuActivity",category.toString());
         }
         /*Category mobile = new Category("Mobile Communication");
         menu.add(mobile);
