@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CFF08080"
     tools:context="com.example.hydry.MobileActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="15dp"
+        android:textColor="#FFF5EE"
         android:gravity="center_horizontal"
         android:text="The main SIM plans are provided by different telecommunication companies for various customers"
         android:layout_alignParentTop="true" />
@@ -44,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:textSize="20dp"
+                android:textColor="#A0522D"
                 android:text="Prepaid" />
 
             <TextView
@@ -51,6 +54,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:textColor="#A0522D"
                 android:textSize="20dp"
                 android:text="Postpaid" />
         </TableRow>
@@ -71,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:textStyle="italic"
+                android:textColor="#FFF5EE"
                 android:text="for travellers" />
 
             <TextView
@@ -79,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:textStyle="italic"
+                android:textColor="#FFF5EE"
                 android:text="For long-term use" />
         </TableRow>
 
@@ -89,6 +95,7 @@
             <TextView
                 android:id="@+id/text_company_0"
                 android:layout_width="70dp"
+                android:textColor="#A0522D"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="" />
@@ -96,6 +103,7 @@
             <TextView
                 android:id="@+id/text_prepaid_0"
                 android:layout_width="140dp"
+                android:textColor="#FFF5EE"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="" />
@@ -103,6 +111,7 @@
             <TextView
                 android:id="@+id/text_postpaid_0"
                 android:layout_width="140dp"
+                android:textColor="#FFF5EE"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="" />
@@ -115,6 +124,7 @@
             <TextView
                 android:id="@+id/text_company_1"
                 android:layout_width="70dp"
+                android:textColor="#A0522D"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="" />
@@ -122,6 +132,7 @@
             <TextView
                 android:id="@+id/text_prepaid_1"
                 android:layout_width="140dp"
+                android:textColor="#FFF5EE"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="" />
@@ -129,6 +140,7 @@
             <TextView
                 android:id="@+id/text_postpaid_1"
                 android:layout_width="140dp"
+                android:textColor="#FFF5EE"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="" />
@@ -142,6 +154,7 @@
             <TextView
                 android:id="@+id/text_company_2"
                 android:layout_width="70dp"
+                android:textColor="#A0522D"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text=""/>
@@ -149,6 +162,7 @@
             <TextView
                 android:id="@+id/text_prepaid_2"
                 android:layout_width="140dp"
+                android:textColor="#FFF5EE"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""  />
@@ -156,6 +170,7 @@
             <TextView
                 android:id="@+id/text_postpaid_2"
                 android:layout_width="140dp"
+                android:textColor="#FFF5EE"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text=""  />
