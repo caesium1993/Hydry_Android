@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:textSize="15dp"
         android:gravity="center_horizontal"
-        android:text="The main SIM plans provided by different telecommunication companies for various customers"
+        android:text="The main SIM plans are provided by different telecommunication companies for various customers"
         android:layout_alignParentTop="true" />
 
     <TableLayout
@@ -42,6 +43,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:textSize="20dp"
                 android:text="Prepaid" />
 
             <TextView
@@ -49,6 +51,7 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:textSize="20dp"
                 android:text="Postpaid" />
         </TableRow>
 
@@ -67,14 +70,16 @@
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="best for travellers" />
+                android:textStyle="italic"
+                android:text="for travellers" />
 
             <TextView
                 android:id="@+id/text_post_des"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="best for long-term use" />
+                android:textStyle="italic"
+                android:text="For long-term use" />
         </TableRow>
 
         <TableRow
