@@ -28,7 +28,7 @@ public class WorthItemAdapter extends ArrayAdapter<Items> {
         TextView itemdescription = (TextView) view.findViewById(R.id.worthitemdescription);
         ImageView itemimage = (ImageView) view.findViewById(R.id.worthitemimage);
         itemname.setText(item.getItemname());
-        itemdescription.setText(item.getItemdescription()+"\nPrefered: "+item.getPrefered());
+        itemdescription.setText(item.getItemdescription()+"\nPreferred: "+item.getPrefered());
         itemimage.setImageResource(item.getItemimage());
         //itemimage.findViewById(R.id.itemimage);
         return view;
