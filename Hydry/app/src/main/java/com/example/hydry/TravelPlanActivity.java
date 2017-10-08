@@ -17,6 +17,7 @@ public class TravelPlanActivity extends Activity {
         setContentView(R.layout.activity_travel_plan);
     }
 
+    //launch a specified activity
     public void toVisa(View view){
         Intent intent_visa = new Intent(TravelPlanActivity.this, VisaActivity.class);
         startActivity(intent_visa);

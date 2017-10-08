@@ -17,24 +17,28 @@ public class TransportActivity extends Activity {
         setContentView(R.layout.activity_transport);
     }
 
+    //open the browser and go to a specified website
     public void toHertz(View view){
         Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.hertz&hl=en-us");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
+    //open the browser and go to a specified website
     public void toEuropcar(View view){
         Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.clanmo.europcar&hl=en-us");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
+    //open the browser and go to a specified website
     public void toAvis(View view){
         Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.avis.androidapp&hl=en-us");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
+    //open the browser and go to a specified website
     public void toPtv(View view){
         Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=au.gov.vic.ptv&hl=en-us");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);

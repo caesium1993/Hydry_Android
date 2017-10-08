@@ -23,11 +23,15 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
     }
+
+    //launch a specified activity
     public void ToLogin(View view){
         Intent intent=new Intent();
         intent.setClass(MainActivity.this, LoginActivity.class);
         startActivity(intent);
     }
+
+    //launch a specified activity
     public void ToRegister(View view){
         Intent intent=new Intent();
         intent.setClass(MainActivity.this, RegisterActivity.class);
