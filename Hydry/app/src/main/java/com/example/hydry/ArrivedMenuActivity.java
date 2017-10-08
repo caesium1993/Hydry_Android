@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-//import com.example.zumoappname.R;
 
 public class ArrivedMenuActivity extends Activity {
 
@@ -60,6 +59,7 @@ public class ArrivedMenuActivity extends Activity {
 
     }
 
+    //launch a specified activity
     public void toMobile (View view){
         if(Location.equals("Australia")) {
             Intent intent_mobile = new Intent(ArrivedMenuActivity.this, MobileActivity.class);
@@ -67,6 +67,7 @@ public class ArrivedMenuActivity extends Activity {
         }
     }
 
+    //launch a specified activity
     public void toSupermarket (View view){
         if (Location.equals("Australia")) {
             Intent intent_supermarket = new Intent(ArrivedMenuActivity.this, SupermarketActivity.class);
@@ -74,6 +75,7 @@ public class ArrivedMenuActivity extends Activity {
         }
     }
 
+    //launch a specified activity
     public void toTransport (View view){
         if (Location.equals("Australia")){
             Intent intent_transport = new Intent(ArrivedMenuActivity.this, TransportActivity.class);
@@ -81,6 +83,7 @@ public class ArrivedMenuActivity extends Activity {
         }
     }
 
+    //launch a specified activity
     public void toShake (View view){
         if (Location.equals("Australia")) {
             Intent intent_shake = new Intent(ArrivedMenuActivity.this, ShakeActivity.class);
