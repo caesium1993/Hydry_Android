@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+/*
+ * This activity contains the main menu of this app
+ */
+
 public class MainMenuActivity extends Activity {
 
     @Override

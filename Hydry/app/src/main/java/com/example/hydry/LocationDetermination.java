@@ -20,6 +20,8 @@ import java.util.List;
 
 /**
  * Created by caesium on 3/10/2017.
+ * This class is defined to detect user location.
+ * It will be automatically initialized when user clicks "Arrived"
  */
 
 public class LocationDetermination {
@@ -39,7 +41,7 @@ public class LocationDetermination {
         locationManager = (LocationManager) activity.getSystemService(Context.LOCATION_SERVICE);
 
         if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            Toast.makeText(activity, "Locating your city...", Toast.LENGTH_LONG).show();
+            Toast.makeText(activity, "Locating your position...", Toast.LENGTH_LONG).show();
             getLocation();
         } else {
             Toast.makeText(activity, "Please turn on GPS", Toast.LENGTH_LONG).show();

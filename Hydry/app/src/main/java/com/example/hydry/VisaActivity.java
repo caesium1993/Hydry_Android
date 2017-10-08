@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-//import com.example.zumoappname.R;
+
 
 public class VisaActivity extends Activity {
 

@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Created by caesium on 29/09/2017.
+ * This adapter is used to match the item view to ListView in ArrivedMenuActivity
  */
 
 public class CategoryAdapter extends ArrayAdapter<Category> {

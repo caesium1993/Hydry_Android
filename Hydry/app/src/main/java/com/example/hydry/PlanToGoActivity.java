@@ -14,6 +14,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * This activity is used to enable the users to choose where they plan to go
+ */
 
 public class PlanToGoActivity extends Activity {
     private ArrayList<String> countries = new ArrayList<String>();
