@@ -1,7 +1,8 @@
 package com.example.hydry;
 
 /**
- * questions for arrived travellers
+ * created by caesium 3/10/2017
+ * this class is item shown on arrived menu
  */
 
 public class Category {

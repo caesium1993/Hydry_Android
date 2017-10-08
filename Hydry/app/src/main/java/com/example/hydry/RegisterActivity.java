@@ -57,6 +57,8 @@ public class RegisterActivity extends Activity {
     }
     public void Register(View view){
 
+        Toast.makeText(RegisterActivity.this, "registering...", Toast.LENGTH_LONG);
+
         if (mClient == null) {
             Toast.makeText(getApplicationContext(),"Client is null",Toast.LENGTH_SHORT).show();
             return;

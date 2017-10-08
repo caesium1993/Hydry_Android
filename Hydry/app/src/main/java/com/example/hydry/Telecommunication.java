@@ -2,6 +2,9 @@ package com.example.hydry;
 
 /**
  * Created by caesium on 3/10/2017.
+ * This class is relavant to the Telecommunication Table in Azure database.
+ * It stores the SIM and plans of different telecommunications companies.
+ * Each entity contains several attributes including id, name, prepaid and postpaid
  */
 
 public class Telecommunication {

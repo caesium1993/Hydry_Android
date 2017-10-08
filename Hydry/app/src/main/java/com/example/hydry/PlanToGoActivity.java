@@ -14,7 +14,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.example.zumoappname.R;
+/*
+ * This activity is used to enable the users to choose where they plan to go
+ */
 
 public class PlanToGoActivity extends Activity {
     private ArrayList<String> countries = new ArrayList<String>();
@@ -58,10 +60,9 @@ public class PlanToGoActivity extends Activity {
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
-
-
     }
 
+    //launch a specified activity
     public void toTravelPlan (View view){
         Intent intent_travel_plan = new Intent(PlanToGoActivity.this, TravelPlanActivity.class);
         startActivity(intent_travel_plan);

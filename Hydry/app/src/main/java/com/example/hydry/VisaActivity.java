@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-//import com.example.zumoappname.R;
+
 
 public class VisaActivity extends Activity {
 
@@ -18,6 +18,7 @@ public class VisaActivity extends Activity {
         setContentView(R.layout.activity_visa);
     }
 
+    //open the browser and go to a specified website
     public void toVisaWebsite(View view){
         Uri uri = Uri.parse("https://www.border.gov.au/Trav/Visa-1/600-");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);

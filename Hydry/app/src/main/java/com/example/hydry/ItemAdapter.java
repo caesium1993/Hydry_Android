@@ -30,7 +30,7 @@ public class ItemAdapter extends ArrayAdapter<Items> {
         TextView itemdescription = (TextView) view.findViewById(R.id.itemdescription);
         ImageView itemimage = (ImageView) view.findViewById(R.id.itemimage);
         itemname.setText(item.getItemname());
-        itemdescription.setText(item.getItemdescription()+"\nPrefered: "+item.getPrefered());
+        itemdescription.setText(item.getItemdescription()+"\nPreferred: "+item.getPrefered());
         itemimage.setImageResource(item.getItemimage());
         //itemimage.findViewById(R.id.itemimage);
         return view;
