@@ -60,7 +60,6 @@
             android:onClick="toTravelPlan"
             android:gravity="center"
             android:text="Confirm"
-
             android:textSize="23dp"
             android:background="#CFFFEFD5"
             android:textColor="#A0522D"
