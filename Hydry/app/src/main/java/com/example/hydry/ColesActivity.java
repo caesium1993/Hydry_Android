@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Window;
 import android.widget.ListView;
 
@@ -14,9 +13,10 @@ import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ExecutionException;
-
+/*
+ *Activity to show the recommended products of coles
+ */
 public class ColesActivity extends Activity {
     private MobileServiceClient mClient;
     private MobileServiceTable<Items> mItemstable;
@@ -25,9 +25,7 @@ public class ColesActivity extends Activity {
     private String[] itemprefered;
     private ArrayList<Items> mitemlist = new ArrayList<Items>();
     private int[] imageids = { R.drawable.coles_gippsland, R.drawable.coles_kangrooburger,
-            R.drawable.coles_croissant, R.drawable.coles_honeyham,R.drawable.coles_englishbreakfast };
-    //ListView mListView = null;
-    ArrayList<Map<String,Object>> mData= new ArrayList<Map<String,Object>>();;
+            R.drawable.coles_croissant, R.drawable.coles_honeyham,R.drawable.coles_englishbreakfast };//product images
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,17 +36,13 @@ public class ColesActivity extends Activity {
             e.printStackTrace();
         }
         super.onCreate(savedInstanceState);
-        //super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_coles);
         Getresultfromazure();
     }
 
     private List<Items> QueryItemsFromItemsTable() throws ExecutionException, InterruptedException, MobileServiceException {
-        //String musernamestr=musernametext.getText().toString();
-        Log.d("query","running");
-        Log.d("result",Integer.toString(mItemstable.where().field("company").eq("coles").execute().get().size()));
-        return mItemstable.where().field("company").eq("coles").execute().get();
+        return mItemstable.where().field("company").eq("coles").execute().get();//query from Azure
     }
     //@Override
 
@@ -71,14 +65,13 @@ public class ColesActivity extends Activity {
                                 //mListView = getListView();
                                 i++;
                             }
-                            int lengh = itemsnames.length;
                             for (int j=0;j<res.size();j++){
                                 Items items = new Items(itemsnames[j],itemsdescription[j],itemprefered[j],imageids[j]);
-                                mitemlist.add(items);
+                                mitemlist.add(items);//add items into itemadapter
                             }
                             ItemAdapter mitemadapter = new ItemAdapter(ColesActivity.this,R.layout.colesitem,mitemlist);
                             ListView listView = (ListView) findViewById(R.id.colesitemlist);
-                            listView.setAdapter(mitemadapter);
+                            listView.setAdapter(mitemadapter);//initialize colesitems' list
                         }
                     });
                 } catch (ExecutionException e) {

@@ -6,7 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-
+/*
+ * Activity of showing supermarket main page
+ */
 
 public class SupermarketActivity extends Activity {
 

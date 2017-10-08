@@ -2,6 +2,7 @@ package com.example.hydry;
 
 /**
  * Created by lenovo on 2017/10/5.
+ * Class for Coles items and Woolworth items
  */
 
 public class Items {

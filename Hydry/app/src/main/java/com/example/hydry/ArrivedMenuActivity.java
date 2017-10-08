@@ -10,7 +10,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
+         /*
+         main menu for the arrived travellers
+         */
 
 public class ArrivedMenuActivity extends Activity {
 
@@ -25,9 +27,7 @@ public class ArrivedMenuActivity extends Activity {
         Bundle bundle=this.getIntent().getExtras();
         Location=bundle.getString("Location");
 
-        /*
-        main menu for the arrived travellers
-         */
+
         initializeMenu();
 
         CategoryAdapter mCategoryAdapter =

@@ -17,6 +17,9 @@ import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+/*
+ * Activity for showing Woolworth recommended products
+*/
 
 
 public class WorthActivity extends Activity {
@@ -27,7 +30,7 @@ public class WorthActivity extends Activity {
     private String[] itemprefered;
     private ArrayList<Items> mitemlist = new ArrayList<Items>();
     private int[] imageids = { R.drawable.woolworth_roastchicken, R.drawable.woolworth_pancake,
-            R.drawable.woolworth_lachang, R.drawable.woolworth_chashao };
+            R.drawable.woolworth_lachang, R.drawable.woolworth_chashao };//items' images
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +47,7 @@ public class WorthActivity extends Activity {
     }
 
     private List<Items> QueryItemsFromItemsTable() throws ExecutionException, InterruptedException, MobileServiceException {
-        return mItemstable.where().field("company").eq("worth").execute().get();
+        return mItemstable.where().field("company").eq("worth").execute().get();//query from Azure
     }
 
     public void Getresultfromazure(){
@@ -63,17 +66,15 @@ public class WorthActivity extends Activity {
                                 itemsnames[i] = item.getItemname();
                                 itemsdescription[i] = item.getItemdescription();
                                 itemprefered[i] = item.getPrefered();
-                                //mListView = getListView();
                                 i++;
                             }
-                            //int lengh = itemsnames.length;
                             for (int j=0;j<res.size();j++){
                                 Items items = new Items(itemsnames[j],itemsdescription[j],itemprefered[j],imageids[j]);
                                 mitemlist.add(items);
                             }
                             WorthItemAdapter mitemadapter = new WorthItemAdapter(WorthActivity.this,R.layout.worthitem,mitemlist);
                             ListView listView = (ListView) findViewById(R.id.worthitemlist);
-                            listView.setAdapter(mitemadapter);
+                            listView.setAdapter(mitemadapter);//initialize woolworthitems' list
                         }
                     });
                 } catch (ExecutionException e) {

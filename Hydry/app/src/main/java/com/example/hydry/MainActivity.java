@@ -8,9 +8,15 @@ import android.view.Window;
 
 import java.net.MalformedURLException;
 
+/*
+ *First page of our APP
+ *Call AzureServicesAdapter.Initialize() function to initialize connection between Android and Azure
+ */
+
+
 public class MainActivity extends Activity {
 
-    public static AzureServicesAdapter azureServicesAdapter;
+    public static AzureServicesAdapter azureServicesAdapter;//variable for Azure connection
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {

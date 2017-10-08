@@ -16,7 +16,9 @@ import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-
+ /*
+ * Activity of login page
+ */
 public class LoginActivity extends Activity {
 
     private MobileServiceClient mClient;
@@ -87,8 +89,6 @@ public class LoginActivity extends Activity {
             }
         };
         runAsyncTask(task);
-        //musernametext.setText("");
-        //mpasswordtext.setText("");
     }
 
     private AsyncTask<Void, Void, Void> runAsyncTask(AsyncTask<Void, Void, Void> task) {
@@ -101,11 +101,7 @@ public class LoginActivity extends Activity {
 
     private List<Users> QueryItemsFromUsersTable() throws ExecutionException, InterruptedException, MobileServiceException {
         String musernamestr=musernametext.getText().toString();
-        return mUsertable.where().field("username").eq(musernamestr).execute().get();
-       // Log.d("query","running");
-       // Log.d("musernamestr",musernamestr);
-        //Toast.makeText(getApplicationContext(),musernamestr,Toast.LENGTH_SHORT).show();
-       // Log.d("query",Integer.toString(mUsertable.where().field("username").eq(musernamestr).execute().get().size()));
+        return mUsertable.where().field("username").eq(musernamestr).execute().get();//query from Azure
     }
     private void createAndShowDialogFromTask(final Exception exception, String title) {
         runOnUiThread(new Runnable() {

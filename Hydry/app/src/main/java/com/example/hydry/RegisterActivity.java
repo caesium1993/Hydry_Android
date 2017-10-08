@@ -13,19 +13,14 @@ import android.widget.Toast;
 import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.http.OkHttpClientFactory;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
-import com.microsoft.windowsazure.mobileservices.table.sync.MobileServiceSyncContext;
-import com.microsoft.windowsazure.mobileservices.table.sync.localstore.ColumnDataType;
-import com.microsoft.windowsazure.mobileservices.table.sync.localstore.MobileServiceLocalStoreException;
-import com.microsoft.windowsazure.mobileservices.table.sync.localstore.SQLiteLocalStore;
-import com.microsoft.windowsazure.mobileservices.table.sync.synchandler.SimpleSyncHandler;
 import com.squareup.okhttp.OkHttpClient;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
-
+ /*
+  * Activity for register page
+  */
 public class RegisterActivity extends Activity {
 
     private MobileServiceClient mClient;
@@ -35,8 +30,6 @@ public class RegisterActivity extends Activity {
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
-        //AzureServicesAdapter.Initialize(this);
-        //AzureServicesAdapter azureServicesAdapter=AzureServicesAdapter.getInstance();
         mClient=MainActivity.azureServicesAdapter.getClient();
 
         mClient.setAndroidHttpClientFactory(new OkHttpClientFactory() {
@@ -49,7 +42,6 @@ public class RegisterActivity extends Activity {
             }
         });
         mUsertable=mClient.getTable(Users.class);
-        //initLocalStore().get();
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_register);
@@ -98,42 +90,8 @@ public class RegisterActivity extends Activity {
     }
 
     public Users addItemInTable(Users user) throws ExecutionException, InterruptedException {
-        Users entity = mUsertable.insert(user).get();
-        //Toast.makeText(getApplicationContext(),user.getUsername(),Toast.LENGTH_SHORT).show();
+        Users entity = mUsertable.insert(user).get();//insert user information to Azure
         return entity;
-    }
-
-    private AsyncTask<Void, Void, Void> initLocalStore() throws MobileServiceLocalStoreException, ExecutionException, InterruptedException {
-        AsyncTask<Void, Void, Void> task = new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-
-                    MobileServiceSyncContext syncContext = mClient.getSyncContext();
-
-                    if (syncContext.isInitialized())
-                        return null;
-
-                    SQLiteLocalStore localStore = new SQLiteLocalStore(mClient.getContext(), "OfflineStore", null, 1);
-
-                    Map<String, ColumnDataType> tableDefinition = new HashMap<String, ColumnDataType>();
-                    tableDefinition.put("id", ColumnDataType.String);
-                    tableDefinition.put("username", ColumnDataType.String);
-                    tableDefinition.put("password", ColumnDataType.String);
-
-                    localStore.defineTable("Users", tableDefinition);
-
-                    SimpleSyncHandler handler = new SimpleSyncHandler();
-
-                    syncContext.initialize(localStore, handler).get();
-
-                } catch (final Exception e) {
-                    createAndShowDialogFromTask(e, "Error");
-                }
-                return null;
-            }
-        };
-        return runAsyncTask(task);
     }
     private AsyncTask<Void, Void, Void> runAsyncTask(AsyncTask<Void, Void, Void> task) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {

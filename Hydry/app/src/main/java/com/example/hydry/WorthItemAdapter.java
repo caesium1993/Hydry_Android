@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * Created by lenovo on 2017/10/6.
+ * Adapter for Woolworth's items
  */
 
 public class WorthItemAdapter extends ArrayAdapter<Items> {
@@ -29,8 +30,7 @@ public class WorthItemAdapter extends ArrayAdapter<Items> {
         ImageView itemimage = (ImageView) view.findViewById(R.id.worthitemimage);
         itemname.setText(item.getItemname());
         itemdescription.setText(item.getItemdescription()+"\nPreferred: "+item.getPrefered());
-        itemimage.setImageResource(item.getItemimage());
-        //itemimage.findViewById(R.id.itemimage);
+        itemimage.setImageResource(item.getItemimage());//map item variables to xml widgets
         return view;
     }
 }

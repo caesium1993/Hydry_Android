@@ -2,6 +2,7 @@ package com.example.hydry;
 
 /**
  * Created by lenovo on 2017/10/1.
+ * Class for user information
  */
 
 public class Users {

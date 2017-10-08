@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 
 /**
  * Created by lenovo on 2017/10/1.
+ * Initialize the connection between Android and Azure
  */
 
 public class AzureServicesAdapter {
@@ -19,7 +20,6 @@ public class AzureServicesAdapter {
     private AzureServicesAdapter(Context context) throws MalformedURLException {
         mContext = context;
         mClient = new MobileServiceClient(mMobileBackendUrl, mContext);
-
     }
 
     public static void Initialize(Context context) throws MalformedURLException {
@@ -36,6 +36,7 @@ public class AzureServicesAdapter {
         }
         return mInstance;
     }
+    //return mClient for activities that need connection to Azure
     public MobileServiceClient getClient() {
         return mClient;
     }
