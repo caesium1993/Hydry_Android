@@ -18,6 +18,10 @@ import com.microsoft.windowsazure.mobileservices.table.query.QueryOrder;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+/*
+ * This activity is read the information about SIM and plans offered by different
+ * telecommunication companies from Azure database.
+ */
 
 public class MobileActivity extends Activity {
     private MobileServiceClient mClient;
@@ -27,7 +31,7 @@ public class MobileActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 
         mClient=MainActivity.azureServicesAdapter.getClient();
-        mTeleTable=mClient.getTable(Telecommunication.class);
+        mTeleTable=mClient.getTable(Telecommunication.class); // get Telecommunication table
 
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -36,6 +40,9 @@ public class MobileActivity extends Activity {
         getMobileContent();
     }
 
+    /*
+     *  This method using AsyncTask is to get content from the table and show them on UI
+     */
     private void getMobileContent() {
         final TextView company_0 = (TextView) findViewById(R.id.text_company_0);
         final TextView prepaid_0 = (TextView) findViewById(R.id.text_prepaid_0);
@@ -95,6 +102,9 @@ public class MobileActivity extends Activity {
 
     }
 
+    /*
+     * using thread pool to execute AsyncTask
+     */
     private AsyncTask<Void, Void, Void> runAsyncTask(AsyncTask<Void, Void, Void> task) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             return task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);

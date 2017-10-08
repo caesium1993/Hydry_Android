@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-
+/*
+ * provides content about visa application
+ */
 
 public class VisaActivity extends Activity {
 
